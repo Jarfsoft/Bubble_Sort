@@ -1,4 +1,4 @@
-def sort(arr)
+def bubble_sort(arr)
     count=0
     while count < arr.length()-1
         if arr[count] > arr[count+1]
@@ -11,4 +11,17 @@ def sort(arr)
     end
     return arr
 end
-puts arr
+
+def bubble_sort_by(arr)
+    count=0
+
+    while count < arr.length()-1
+        if yield(arr[count], arr[count+1]).positive?
+            arr[count] , arr[count+1] = arr[count+1] , arr[count]
+            count=0
+        else
+            count+=1
+        end
+    end
+    return arr
+end
