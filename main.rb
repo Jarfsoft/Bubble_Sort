@@ -8,7 +8,7 @@ def bubble_sort(arr)
       count += 1
     end
   end
-  return arr
+  arr
 end
 
 def bubble_sort_by(arr)
@@ -21,4 +21,5 @@ def bubble_sort_by(arr)
       count += 1
     end
   end
+  arr
 end
